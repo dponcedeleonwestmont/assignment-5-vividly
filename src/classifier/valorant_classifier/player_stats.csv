@@ -1,4 +1,4 @@
-line,match_id,game_id,team,score_team,opponent,score_opp,win_lose,map,map_pick,player_id,player,agent,role,rating,acs,kill,death,assist,kast%,adr,hs%,fk,fd
+,match_id,game_id,team,score_team,opponent,score_opp,win_lose,map,map_pick,player_id,player,agent,role,rating,acs,kill,death,assist,kast%,adr,hs%,fk,fd
 6221,61192,137642,PRX,10,EG,13,opponent win,Lotus,opponent pick,9801,f0rsakeN,astra,controller,0.91,197,16,18,7,57%,143,36%,5,6
 5209,59972,134557,SEN,8,C9,13,opponent win,Pearl,team pick,263,Marved,astra,controller,0.46,103,7,18,2,52%,71,21%,2,6
 3806,55153,123163,EG,15,NRG,13,team win,Split,team pick,604,Boostio,astra,controller,1.21,228,23,19,9,79%,153,18%,1,5
