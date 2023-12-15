@@ -33,20 +33,29 @@ class ValorantFeatureSet(FeatureSet):
         # Extracts relevant features from the source object (CSV)
         player = source_object['player']
         mapname = source_object['map']
-        kill = source_object['kill']
-        firstblood = source_object['fk']
-        assists = source_object['assist']
+        # kill = source_object['kill']
+        # firstblood = source_object['fk']
+        # assists = source_object['assist']
+        acs = source_object['acs']
+        rating = source_object['rating']
+        fd = source_object['fd']
+        adr = source_object['adr']
+        # kast = source_object['kast%']
+        team = source_object['team']
 
         # Creates a set of Valorant features based on extracted data
         features: set[ValorantFeature] = set()
         features.add(ValorantFeature('player' + player, True))
         features.add(ValorantFeature('map' + mapname, True))
-        if kill > 14:
-            features |= {ValorantFeature('15+ kills', True)}
-        if firstblood > 2:
-            features |= {ValorantFeature('3+ firstbloods', True)}
-        if assists > 6:
-            features |= {ValorantFeature('7+ assists', True)}
+        features.add(ValorantFeature('team' + team, True))
+        if acs > 130:
+            features |= {ValorantFeature('acs>130', True)}
+        if rating > 0.7:
+            features |= {ValorantFeature('rating>0.7', True)}
+        if fd > 4:
+            features |= {ValorantFeature('4+ deaths', True)}
+        if adr > 118:
+            features |= {ValorantFeature('adr>118', True)}
 
         return ValorantFeatureSet(features, known_clas)
 

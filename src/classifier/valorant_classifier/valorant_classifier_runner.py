@@ -41,7 +41,9 @@ for idx in test_indices:
     predicted_role = classifier.gamma(test_feature_set)
     actual_role = row['role']
     agent = row['agent']
-    print(f"[{idx}] The classified role of the agent {agent} is: {predicted_role}; actual role: {actual_role}")
+    number = row['number']
+    player = row['player']
+    print(f"[{idx}][{number}] Player: [{player}]The classified role of the agent {agent} is: {predicted_role}; actual role: {actual_role}")
     if predicted_role == actual_role:
         correct_predictions += 1
     i += 1
