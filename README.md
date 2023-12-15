@@ -66,3 +66,6 @@ valorant-role-prediction/
 
 ### Valorant Player Stats
 The "VCT All Tournament 2023 Stats" dataset by Ediashta Revin was selected, containing performance statistics of Valorant players. The goal is to predict the in-game role of players (duelist, sentinel, initiator, controller) based on their individual and team statistics, contributing to strategic insights for Valorant teams.
+
+### Extra Credit
+We were able to demo the utilization of a public cloud computing resource, this being GCP. And it ran as expected and we got the same results as if running it through PyCharm.
