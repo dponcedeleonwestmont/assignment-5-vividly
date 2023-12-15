@@ -53,5 +53,5 @@ accuracy = round((correct_predictions / len(test_indices)) * 100, 2)
 print(f"Accuracy: {accuracy}%")
 
 # Prints present features
-top = classifier.present_features(3)
+top = classifier.present_features(5)
 print(top)
