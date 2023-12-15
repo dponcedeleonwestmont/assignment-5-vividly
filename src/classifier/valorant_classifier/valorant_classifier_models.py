@@ -42,6 +42,7 @@ class ValorantFeatureSet(FeatureSet):
         adr = source_object['adr']
         # kast = source_object['kast%']
         team = source_object['team']
+        deaths = source_object['death']
 
         # Creates a set of Valorant features based on extracted data
         features: set[ValorantFeature] = set()
@@ -56,6 +57,8 @@ class ValorantFeatureSet(FeatureSet):
             features |= {ValorantFeature('4+ deaths', True)}
         if adr > 118:
             features |= {ValorantFeature('adr>118', True)}
+        if deaths > 15:
+            features |= {ValorantFeature('deaths>15', True)}
 
         return ValorantFeatureSet(features, known_clas)
 
