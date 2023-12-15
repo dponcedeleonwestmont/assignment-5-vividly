@@ -52,7 +52,7 @@ class ValorantFeatureSet(FeatureSet):
             features |= {ValorantFeature('acs>130', True)}
         if rating > 0.7:
             features |= {ValorantFeature('rating>0.7', True)}
-        if fd > 4:
+        if fd > 6:
             features |= {ValorantFeature('4+ deaths', True)}
         if adr > 118:
             features |= {ValorantFeature('adr>118', True)}
